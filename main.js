@@ -26,6 +26,21 @@ const keyList = document.querySelectorAll('.tecla');
 
 // }
 
+// let counter = 0;
+
+// Enquanto
+// while(counter < keyList.length) {
+
+//     const key = keyList[counter];
+//     const instrument = key.classList[1];
+//     const sound = `#som_${instrument}`;
+
+//     key.onclick = function () {
+//         playSound(sound);
+//     }
+//     counter += 1;
+// } 
+
 keyList.forEach((key) => {
     const instrument = key.classList[1];
     const sound = `#som_${instrument}`;
@@ -45,19 +60,9 @@ keyList.forEach((key) => {
     }
 })
 
+const content = document.getElementById('content');
+const minimizedButton = document.getElementById('minimize');
 
-
-// let counter = 0;
-
-// Enquanto
-// while(counter < keyList.length) {
-
-//     const key = keyList[counter];
-//     const instrument = key.classList[1];
-//     const sound = `#som_${instrument}`;
-
-//     key.onclick = function () {
-//         playSound(sound);
-//     }
-//     counter += 1;
-// } 
+minimizedButton.addEventListener('click', () => {
+    content.classList.toggle('minimized');
+});
