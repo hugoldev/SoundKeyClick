@@ -16,22 +16,25 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  color: var(--branca);
-  margin-bottom: 20px;
-  font-size: 2rem;
-  margin-left: -55px;
-}
-
-.teclado {
+.window {
   padding: 50px 10px 10px 10px;
   margin-right: 60px; 
   border: solid;
   border-width: 1px;
-  border-color: rgba(188, 190, 202, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
   background-color: #4f4f4e;
   box-shadow: 0 13px 27px -5px #32325d40,0 8px 16px -8px #0000004d,0 -6px 16px -6px #00000008;
   border-radius: 15px;
+}
+
+h1 {
+  color: var(--branca);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.teclado {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -75,30 +78,24 @@ h1 {
   width: 60px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
+  top: 260px;
 }
 
 .button {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  position: absolute;
 }
 
 .red { 
   background-color: #ff5f57;
-  right: 230px;
-  top: 5px;
 }
 
 .yellow {
-  background-color: #ffbd2e;
-  right: 210px;
-  top: 5px;
+  background-color: #ffbd2e; 
 }
 
 .green {
   background-color: #28c941;
-  right: 190px;
-  top: 5px;
 }
