@@ -1,7 +1,7 @@
 :root {
   --cinza: #aaa;
-  --vermelha: #e93d50;
-  --vermelha-escura: #af303f;
+  --laranja: #fc9c0a;
+  --laranja-escura: #ff7300a1;
   --branca: #fff;
   --luz: rgb(229, 255, 0);
 }
@@ -20,23 +20,28 @@ h1 {
   color: var(--branca);
   margin-bottom: 20px;
   font-size: 2rem;
+  margin-left: -55px;
 }
 
 .teclado {
-  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
-  border-radius: 30px;
+  padding: 50px 10px 10px 10px;
+  margin-right: 60px; 
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(188, 190, 202, 0.1);
+  background-color: #4f4f4e;
+  box-shadow: 0 13px 27px -5px #32325d40,0 8px 16px -8px #0000004d,0 -6px 16px -6px #00000008;
+  border-radius: 15px;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 10px;
 }
 
 .tecla {
-  background-color: var(--branca);
-  border-radius: 30px;
-  box-shadow: 3px 3px 0 var(--cinza);
-  color: var(--vermelha);
+  background-color: #596869;
+  border-radius: 20px;
+  box-shadow: 0 13px 27px -5px #32325d40,0 8px 16px -8px #0000004d,0 -6px 16px -6px #00000008;
+  color: var(--laranja);
   cursor: pointer;
   height: 120px;
   font-size: 1.75em;
@@ -48,9 +53,9 @@ h1 {
 
 .tecla.ativa,
 .tecla:active {
-  background-color: var(--vermelha);
-  border: 4px solid  var(--vermelha);
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  background-color: var(--laranja);
+  border: 4px solid  var(--laranja);
+  box-shadow: 3px 3px 0 var(--laranja-escura) inset;
   color: var(--branca);
   outline: none;
 }
@@ -63,5 +68,37 @@ h1 {
 
 .tecla.active:focus,
 .tecla:active:focus {
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+  box-shadow: 3px 3px 0 var(--laranja-escura) inset, 1px 1px 10px var(--luz);
+}
+
+.window-controls {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.red { 
+  background-color: #ff5f57;
+  right: 230px;
+  top: 5px;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+  right: 210px;
+  top: 5px;
+}
+
+.green {
+  background-color: #28c941;
+  right: 190px;
+  top: 5px;
 }
